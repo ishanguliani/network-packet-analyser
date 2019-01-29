@@ -12,8 +12,11 @@ A java program to explore tcp, udp and icmp packets in details. Runs as command 
 
 `
 ETHER:	----- Ether Header -----
+
 ETHER:
+
 ETHER:	Packet Size    =	266 bytes
+
 ETHER:	Destination    =	00:00:0c:07:ac:01
 ETHER:	Source         =	c0:14:3d:d5:72:8b
 ETHER:	Ethertype      =	0800 (IP)
