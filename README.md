@@ -10,13 +10,10 @@ A java program to explore tcp, udp and icmp packets in details. Runs as command 
 
 ## Sample output -
 
-`
+```
 ETHER:	----- Ether Header -----
-
 ETHER:
-
 ETHER:	Packet Size    =	266 bytes
-
 ETHER:	Destination    =	00:00:0c:07:ac:01
 ETHER:	Source         =	c0:14:3d:d5:72:8b
 ETHER:	Ethertype      =	0800 (IP)
@@ -68,4 +65,4 @@ TCP:		17 03 03 00 c3 00 00 00 00 00 00 00
 TCP:		3e fc 3b b6 ce fa b3 67 91 9e 87 b9 
 TCP:		68 1c 26 96 dc 87 a4 e2 8f 7c bb b2 
 TCP:		b3 bd a3 3f bf 37 b2 e1 9a 9d 8c a5 
-`
+```
