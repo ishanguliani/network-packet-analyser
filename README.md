@@ -11,7 +11,6 @@ A java program to explore tcp, udp and icmp packets in details. Runs as command 
 ## Sample output -
 
 `
-
 ETHER:	----- Ether Header -----
 ETHER:
 ETHER:	Packet Size    =	266 bytes
