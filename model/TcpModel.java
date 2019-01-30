@@ -25,7 +25,7 @@ public class TcpModel implements OnPacketReadyListener{
     private long destinationPort;
     private long sequenceNumber;
     private long acknowledgementNumber;
-    private int dataOffset;
+    private OptionsModel options;
     private Flag flags;
     private long window;
     private Checksum headerChecksum;
@@ -55,10 +55,6 @@ public class TcpModel implements OnPacketReadyListener{
         return acknowledgementNumber;
     }
 
-    public int getDataOffset() {
-        return dataOffset;
-    }
-
     public Flag getFlags() {
         return flags;
     }
@@ -73,6 +69,10 @@ public class TcpModel implements OnPacketReadyListener{
 
     public long getUrgentPointer() {
         return urgentPointer;
+    }
+
+    public OptionsModel getOptions() {
+        return options;
     }
 
     public DataModel getData() {
@@ -133,6 +133,7 @@ public class TcpModel implements OnPacketReadyListener{
         this.urgentPointer = Long.parseLong((convertByteToHex(tcpModelList.get(52))
                 + convertByteToHex(tcpModelList.get(53))), 16);
         this.data = new DataModel(tcpModelList.subList(65, Math.min(130, this.packetSize)), ProtocolType.TYPE_TCP);
+        this.options = new OptionsModel(tcpModelList.subList(54, 67));
     }
 
 
@@ -157,7 +158,7 @@ public class TcpModel implements OnPacketReadyListener{
                 + StringManager.TCP_FRAME_LABEL+     "Window            =\t" + getWindow()
                 + StringManager.TCP_FRAME_LABEL+     "Header checksum   =\t" + getHeaderChecksum()
                 + StringManager.TCP_FRAME_LABEL+     "Urgent pointer    =\t" + getUrgentPointer()
-                + StringManager.IP_FRAME_LABEL +     "No Options"
+                + StringManager.TCP_FRAME_LABEL +    "Options (12 bytes)=\t" + getOptions()
                 + StringManager.TCP_FRAME_LABEL+     "Data (first 64 B) =\t" + getData()
                 + StringManager.TCP_FRAME_LABEL;
     }
