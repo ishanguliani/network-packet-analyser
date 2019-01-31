@@ -25,7 +25,7 @@ all: $(PROGRAM)
 clean:
 	@echo "-------------------"
 	@echo "cleaning all .class files in the classes directory, if applicable"
-	@rm -rf classes
+	@rm -rf classes ||:
 	@echo "cleaning model..."
 	@echo "cleaning helper..."
 	@echo "-------------------"
@@ -39,13 +39,16 @@ $(MAKEDIR): $(MAINFILE) clean
 	@mkdir -p classes && cp -n *.bin classes/
 
 $(MAINFILE): Main.java 
-	@echo "NOTE: You can start the JAVA program implicitly by appending the network packet filename to the make command." 
-	@echo "NOTE: Run the following command to forward a file to the JAVA program"
-	@echo "NOTE:    $ make <filename>    OR    $ make program <filename>"
-	@echo "NOTE: Only files that end in .bin format are supported at this point"
 	@echo ""
 	@echo "----Beginning make program------"
 	@echo "--------------------------------"
+	@echo "NOTE: You can start the JAVA program implicitly by appending the network packet filename to the make command." 
+	@echo "NOTE: There are three sample binary files in this directory to test the program"
+	@echo "" && echo "Sample execution-"
+	@echo "TCP PACKET ANALYSIS:" && echo "$$ make program file=new_tcp_packet1.bin"
+	@echo "UDP PACKET ANALYSIS:" && echo "$$ make program file=new_udp_packet1.bin"
+	@echo "ICMP PACKET ANALYSIS:" && echo "$$ make program file=new_icmp_packet2.bin"
+	@echo "" && echo "NOTE: Only files that end in .bin format are supported at this point"
 	@echo ""
 	@echo "Preparing directory for execution"
 	@echo "Looking for Main.java..."
