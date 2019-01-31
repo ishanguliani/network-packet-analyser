@@ -13,6 +13,7 @@
  */
 
 package helper;
+import helper.StringManager;
 
 public class Helper {
 

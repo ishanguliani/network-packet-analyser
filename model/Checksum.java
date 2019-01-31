@@ -11,7 +11,8 @@
  */
 
 package model;
-
+import helper.StringManager;
+import helper.Helper;
 public class Checksum {
 
     private String checksum;

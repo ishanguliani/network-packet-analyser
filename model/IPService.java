@@ -12,8 +12,8 @@
  */
 
 package model;
-
 import helper.StringManager;
+import helper.Helper;
 
 public class IPService {
     private String type;

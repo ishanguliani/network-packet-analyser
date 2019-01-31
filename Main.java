@@ -21,9 +21,6 @@
  *  ->  icmp
  */
 
-import helper.StringManager;
-import model.*;
-
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -32,6 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static helper.Helper.print;
+import helper.StringManager;
+import model.EthernetFrameModel;
+import model.ProtocolType;
+import model.IPModel;
+import model.TcpModel;
+import model.UdpModel;
+import model.IcmpModel;
 
 public class Main {
 

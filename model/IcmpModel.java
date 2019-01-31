@@ -12,10 +12,10 @@
 
 package model;
 
-import helper.StringManager;
-
 import java.util.ArrayList;
 import java.util.List;
+import helper.StringManager;
+import helper.Helper;
 
 import static helper.Helper.BitwiseManager.convertByteToHex;
 

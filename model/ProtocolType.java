@@ -12,11 +12,11 @@
 
 package model;
 
-import helper.Helper;
-
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import helper.StringManager;
+import helper.Helper;
 
 public class ProtocolType {
     public static final String TYPE_IP = "IP";
