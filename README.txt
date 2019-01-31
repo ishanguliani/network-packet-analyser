@@ -34,4 +34,4 @@ Here are some sample program executions -
 
 
 Ishan Guliani
-@ishanguliani aka ig5859
+@ishanguliani : ig5859@rit.edu
